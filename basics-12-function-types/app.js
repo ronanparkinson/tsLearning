@@ -1,13 +1,20 @@
-var userType;
-var userName;
-userType = 5;
-userType = 'Max';
-//Error here as you must type check before assigning value to variable 
-//userName = userType;
-if (typeof userType === 'string') {
-    userName = userType;
+var e1 = {
+    name: 'Ronan',
+    privileges: ['create-server'],
+    startDate: new Date()
+};
+console.log(e1);
+function add(a, b) {
+    if (typeof a === 'string' || typeof b === 'string') {
+        return a.toString() + b.toString();
+    }
+    return a + b;
 }
-function generateError(message, code) {
-    throw { message: message, errorCode: code };
+function printEmployeeInfo(emp) {
+    console.log('Name:' + emp.name);
+    //finds privilages in UnknownEmployee as Admin contains UnknownEmployee which UnknowEmployee can be
+    if ('privilages' in emp) {
+        console.log('Privileges: ' + emp.privilages);
+    }
 }
-generateError("This is an error message: ", 500);
+printEmployeeInfo(e1);
