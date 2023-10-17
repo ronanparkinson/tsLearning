@@ -19,19 +19,18 @@ combineValues = add;
 // combineValues = 5;
 console.log(combineValues(8, 8));
 // let someValue: undefined;
-function stringOrNumber(n1, n2) {
-    if (typeof n1 === 'string' && typeof n2 === 'string') {
-        return +n1 + +n2;
-    }
-    else {
-        return n1 + n2;
-    }
-}
+// function stringOrNumber(n1, n2){
+//   if(typeof n1 === 'string' && typeof n2 === 'string'){
+//       return +n1 + +n2;
+//   } else{
+//       return n1 + n2;
+//   }
+// }
 let Number1;
 let Number2;
 Number1 = 'dsds';
 Number2 = 'sdd';
-console.log(stringOrNumber(Number1, Number2));
+// console.log(stringOrNumber(Number1,Number2));
 const Person = {
     name: 'ron',
     age: 27
