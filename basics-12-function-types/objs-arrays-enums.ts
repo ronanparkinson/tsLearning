@@ -45,3 +45,21 @@ for (const hobby of person.hobbies) {
 if (person.role === Role.AUTHOR) {
   console.log('is author');
 }
+
+interface CourseGoal{
+  title: string;
+  description: string;
+  completeUntil: Date;
+}
+
+function createCourseGoal(title: string, description: string, date: Date): CourseGoal{
+  let courseGoal: Partial<CourseGoal> = {}; // Partial makes all of the object fields, optional eg title.
+  courseGoal.title = title;
+  courseGoal.completeUntil = date;
+  courseGoal.description = description;
+  return courseGoal as CourseGoal;
+}
+
+
+const names: Readonly<string[]> = ['Max', 'Anna'];
+names.push('Manu');

@@ -67,3 +67,4 @@ console.log(textStorage.getItems());
 
 const numberStorage = new DataStorage<number>();
 numberStorage.addItem(4);
+
